@@ -362,8 +362,8 @@ def scale_and_crop(im, width, height, opts):
 scale_and_crop.valid_options = ('crop', 'upscale')
 
 
-symbols = (u"абвгдеёзийклмнопрстуфхъыьэАБВГДЕЁЗИЙКЛМНОПРСТУФХЪЫЬЭ",
-           u"abvgdeezijklmnoprstufh'y'eABVGDEEZIJKLMNOPRSTUFH'Y'E")
+symbols = (u"абвгдеёзийклмнопрстуфхъыьэАБВГДЕЁЗИЙКЛМНОПРСТУФХЪЫЬЭц",
+           u"abvgdeezijklmnoprstufh'y'eABVGDEEZIJKLMNOPRSTUFH'Y'Ez")
 
 tr = {ord(a): ord(b) for a, b in zip(*symbols)}
 
