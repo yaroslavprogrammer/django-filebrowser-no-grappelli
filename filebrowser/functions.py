@@ -363,7 +363,7 @@ scale_and_crop.valid_options = ('crop', 'upscale')
 
 
 symbols = (u"абвгдеёзийклмнопрстуфхъыьэАБВГДЕЁЗИЙКЛМНОПРСТУФХЪЫЬЭц",
-           u"abvgdeezijklmnoprstufh'y'eABVGDEEZIJKLMNOPRSTUFH'Y'Ez")
+           u"abvgdeezijklmnoprstufh-y-eABVGDEEZIJKLMNOPRSTUFH-Y-Ez")
 
 tr = {ord(a): ord(b) for a, b in zip(*symbols)}
 
