@@ -387,7 +387,7 @@ def convert_filename(value):
             value = normalized[0]
 
     if CONVERT_FILENAME:
-        value = value.replace(" ", "_").lower()
+        value = value.replace(" ", "-").lower()
 
     value = value.strip('/').strip('\\').strip('../').strip('./')
     value = unicode(value).translate(tr)
