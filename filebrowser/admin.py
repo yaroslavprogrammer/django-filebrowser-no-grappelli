@@ -5,14 +5,10 @@ from .fields import FileBrowseField
 from .functions import convert_filename
 
 
-def get_path_for_object(obj):
-    path = unicode(inline.model.get_file_path(obj))
-    path = convert_filename(path)
-    return path
-
 def set_path_for_model_fields(model, obj):
     if hasattr(model, 'get_file_path'):
-        path = get_path_for_object(obj)
+        path = unicode(model.get_file_path(obj))
+        path = convert_filename(path)
         for field in model._meta.fields:
             if issubclass(type(field), FileBrowseField):
                 field.subdirectory = path
