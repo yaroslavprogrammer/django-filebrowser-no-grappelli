@@ -18,7 +18,7 @@ def set_path_for_model_fields(model, object_id):
             if issubclass(type(field), FileBrowseField):
                 field.subdirectory = path
 
-class FileBrowserMakeDirAdmin(object):
+class FileBrowserMakeDirAdmin(admin.ModelAdmin):
     def change_view(self, request, object_id, form_url='', extra_context=None):
         for inline in self.inlines:
             set_path_for_model_fields(inline.model, object_id)
