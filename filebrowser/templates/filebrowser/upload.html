@@ -49,10 +49,10 @@
                     emptyError: "{% trans "{file} is empty, please select files again without it." %}",
                     onLeave: "{% trans "The files are being uploaded, if you leave now the upload will be cancelled." %}"
                 },
-                template: '<div class="qq-uploader">' + 
+                template: '<div class="qq-uploader">' +
                     '<div class="qq-upload-drop-area"><span>{% trans "Drop files here to upload" %}</span></div>' +
                     '<div class="qq-upload-button">{% trans "Upload a file" %}</div>' +
-                    '<ul class="qq-upload-list"></ul>' + 
+                    '<ul class="qq-upload-list"></ul>' +
                  '</div>',
                 getItem: function(id) {
                     var items = $(this.element).find('.qq-upload-list li').get();
@@ -71,8 +71,8 @@
                     bar.css('width', new_width);
                 },
                 onComplete: function(id, fileName, resp){
-                    if (resp.success) {
-                        this.getItem(id).fadeOut('slow');
+                    if (!uploader._filesInProgress) {
+                        window.location.href = "{% url 'filebrowser:fb_browse'  %}?dir={{ query.dir|escapejs }}"
                     }
                 },
                 showMessage: function(message){ alert(message); }
