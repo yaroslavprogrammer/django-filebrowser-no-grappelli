@@ -17,7 +17,7 @@ except ImportError:
     DEFAULT_PATH_TINYMCE = os.path.join(settings.STATIC_ROOT, 'admin/tinymce/jscripts/tiny_mce/')
 
 # PATH AND URL SETTINGS
-# Main Media Settings 
+# Main Media Settings
 # WARNING: FILEBROWSER_MEDIA_ROOT and FILEBROWSER_MEDIA_URL will be removed in the next major release of Filebrowser.
 # Read the documentation on FileBrowser's storages (http://readthedocs.org/docs/django-filebrowser/en/latest/file_storages.html)
 MEDIA_ROOT = getattr(settings, "FILEBROWSER_MEDIA_ROOT", settings.MEDIA_ROOT)
@@ -115,6 +115,7 @@ FOLDER_REGEX = getattr(settings, "FILEBROWSER_FOLDER_REGEX", r'^[\w._/-]+$')
 SEARCH_TRAVERSE = getattr(settings, "FILEBROWSER_SEARCH_TRAVERSE", False)
 # Default Upload and Version Permissions
 DEFAULT_PERMISSIONS = getattr(settings, "FILEBROWSER_DEFAULT_PERMISSIONS", 0755)
+AUTO_REDIRECT_AFTER_UPLOAD = getattr(settings, "FILEBROWSER_AUTO_REDIRECT_AFTER_UPLOAD", False)
 
 # EXTRA TRANSLATION STRINGS
 # The following strings are not availabe within views or templates
