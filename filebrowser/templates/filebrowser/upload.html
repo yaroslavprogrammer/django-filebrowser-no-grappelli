@@ -73,7 +73,7 @@
                 onComplete: function(id, fileName, resp){
                     {% if settings_var.AUTO_REDIRECT_AFTER_UPLOAD %}
                     if (!uploader._filesInProgress) {
-                        window.location.href = "{% url 'filebrowser:fb_browse'  %}?dir={{ query.dir|escapejs }}"
+                        window.location.href = "{% url 'filebrowser:fb_browse'  %}?dir={{ query.dir|escapejs }}&pop={{ query.pop }}&subdir={{ query.subdir }}"
                     }
                     {% endif %}
                 },
